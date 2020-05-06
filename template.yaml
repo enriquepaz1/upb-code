@@ -1,4 +1,3 @@
-  
 AWSTemplateFormatVersion : '2010-09-09'
 Transform:
   - AWS::Serverless-2016-10-31
@@ -49,7 +48,7 @@ Resources:
   GetUserLambda:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: get-user-lambda
+      FunctionName: get-user-lambda5
       Runtime: python3.6
       CodeUri: ./build
       Handler: lambda1.handler
@@ -58,7 +57,7 @@ Resources:
       Role: !GetAtt MyLambdaRole.Arn
       Environment:
          Variables:
-          MY_NAME : enrique
+          MY_NAME : mauri
       Events:
         GetUsers:
           Type: Api
@@ -70,7 +69,7 @@ Resources:
   GetUserLambda2:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: get-user-lambda5
+      FunctionName: get-user-lambda6
       Runtime: python3.6
       CodeUri: ./build
       Handler: lambda2.handler
@@ -86,7 +85,7 @@ Resources:
   PostLambda:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: post-lambda
+      FunctionName: post-lambda5
       Runtime: python3.6
       CodeUri: ./build
       Handler: lambda3.handler
